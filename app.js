@@ -11,7 +11,11 @@ app.get('/payment',(req,res)=>{
     res.send('Payment Gateway');
 })
 
-
+app.get("/auth",(req,res)=>
+{
+    let a = req.body.data;
+    res.send("Authentication successfully");
+})
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
