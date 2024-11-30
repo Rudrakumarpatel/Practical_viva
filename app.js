@@ -6,6 +6,11 @@ app.get('/', (req, res) => {
   res.send('Hello, World!');
 });
 
+app.get('/payment',(req,res)=>{
+    let a = req.body.data;
+    res.send('Payment Gateway');
+})
+
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
